@@ -1,0 +1,14 @@
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.csproj.AssemblyReference.cache
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.csproj.CoreCompileInputs.cache
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\StaffService.dll.config
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\StaffService.dll
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\StaffService.pdb
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\EntityFramework.dll
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\EntityFramework.SqlServer.dll
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\EntityFramework.xml
+C:\Users\tiend\source\repos\StaffService\StaffService\bin\EntityFramework.SqlServer.xml
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.csproj.CopyComplete
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.dll
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.pdb
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.Migrations.EmployeeDb.resources
+C:\Users\tiend\source\repos\StaffService\StaffService\obj\Debug\StaffService.csproj.GenerateResource.cache
