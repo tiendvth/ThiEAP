@@ -13,16 +13,35 @@
   <wsdl:message name="IService1_AddEmployyee_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddEmployyeeResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ListEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmployeeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="AddEmployyee">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddEmployyee" message="tns:IService1_AddEmployyee_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddEmployyeeResponse" message="tns:IService1_AddEmployyee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListEmployee" message="tns:IService1_ListEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListEmployeeResponse" message="tns:IService1_ListEmployee_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddEmployyee">
       <soap:operation soapAction="http://tempuri.org/IService1/AddEmployyee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmployee">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListEmployee" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

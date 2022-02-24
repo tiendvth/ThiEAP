@@ -26,10 +26,10 @@ namespace StaffClient.StaffService {
         private string DepartmentField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmployeeIDField;
+        private string EmployeeNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmployeeNameField;
+        private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SalaryField;
@@ -58,19 +58,6 @@ namespace StaffClient.StaffService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EmployeeID {
-            get {
-                return this.EmployeeIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmployeeIDField, value) != true)) {
-                    this.EmployeeIDField = value;
-                    this.RaisePropertyChanged("EmployeeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string EmployeeName {
             get {
                 return this.EmployeeNameField;
@@ -79,6 +66,19 @@ namespace StaffClient.StaffService {
                 if ((object.ReferenceEquals(this.EmployeeNameField, value) != true)) {
                     this.EmployeeNameField = value;
                     this.RaisePropertyChanged("EmployeeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }
@@ -115,6 +115,12 @@ namespace StaffClient.StaffService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEmployyee", ReplyAction="http://tempuri.org/IService1/AddEmployyeeResponse")]
         System.Threading.Tasks.Task<StaffClient.StaffService.Employee> AddEmployyeeAsync(StaffClient.StaffService.Employee emp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ListEmployee", ReplyAction="http://tempuri.org/IService1/ListEmployeeResponse")]
+        StaffClient.StaffService.Employee[] ListEmployee();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ListEmployee", ReplyAction="http://tempuri.org/IService1/ListEmployeeResponse")]
+        System.Threading.Tasks.Task<StaffClient.StaffService.Employee[]> ListEmployeeAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -150,6 +156,14 @@ namespace StaffClient.StaffService {
         
         public System.Threading.Tasks.Task<StaffClient.StaffService.Employee> AddEmployyeeAsync(StaffClient.StaffService.Employee emp) {
             return base.Channel.AddEmployyeeAsync(emp);
+        }
+        
+        public StaffClient.StaffService.Employee[] ListEmployee() {
+            return base.Channel.ListEmployee();
+        }
+        
+        public System.Threading.Tasks.Task<StaffClient.StaffService.Employee[]> ListEmployeeAsync() {
+            return base.Channel.ListEmployeeAsync();
         }
     }
 }

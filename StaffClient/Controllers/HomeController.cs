@@ -45,7 +45,8 @@ namespace StaffClient.Controllers
 
         public ActionResult ListEmployee()
         {
-            return View();
+            
+            return View(service.ListEmployee());
         }
     }
     
